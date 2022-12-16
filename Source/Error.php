@@ -73,11 +73,11 @@ class Error extends Exception
 
         return set_error_handler(
             function ($no, $str, $file = null, $line = null, $ctx = null): void {
+				$trace = debug_backtrace();
                 if (0 === ($no & error_reporting())) {
                     return;
                 }
 
-                $trace = debug_backtrace();
                 array_shift($trace);
                 array_shift($trace);
 
