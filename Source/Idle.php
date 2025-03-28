@@ -83,7 +83,7 @@ class Idle extends \Exception
         string $message,
         int $code            = 0,
         $arguments           = [],
-        \Exception $previous = null
+        ?\Exception $previous = null
     ) {
         $this->_tmpArguments = $arguments;
         parent::__construct($message, $code, $previous);

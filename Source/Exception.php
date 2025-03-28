@@ -57,7 +57,7 @@ class Exception extends Idle implements Event\Source
         string $message,
         int $code            = 0,
         $arguments           = [],
-        \Throwable $previous = null
+        ?\Throwable $previous = null
     ) {
         parent::__construct($message, $code, $arguments, $previous);
 

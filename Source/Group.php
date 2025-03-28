@@ -57,7 +57,7 @@ class Group extends Exception implements \ArrayAccess, \IteratorAggregate, \Coun
         string $message,
         int $code            = 0,
         array $arguments     = [],
-        \Exception $previous = null
+        ?\Exception $previous = null
     ) {
         parent::__construct($message, $code, $arguments, $previous);
         $this->_group = new \SplStack();
